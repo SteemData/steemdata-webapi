@@ -1,0 +1,5 @@
+eve
+flask
+Flask-PyMongo
+markdown
+funcy
