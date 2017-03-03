@@ -13,6 +13,15 @@ STATUS_ERR = 'ERROR'
 # change default response fields
 EXTRA_RESPONSE_FIELDS = ['ID_FIELD']
 
+account_schema = {
+    'name': {
+        'type': 'string',
+        'minlength': 1,
+        'maxlength': 30,
+    },
+    'sp': {},
+}
+
 # our models
 DOMAIN = {
     'Accounts': {
@@ -22,6 +31,7 @@ DOMAIN = {
             'url': 'regex("[\w]+")',
             'field': 'name',
         },
+        'schema': account_schema,
     },
     'Posts': {
         'id_field': 'identifier',
@@ -35,3 +45,5 @@ DOMAIN = {
     'Operations': {},
     'AccountOperations': {},
 }
+
+
