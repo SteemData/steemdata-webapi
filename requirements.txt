@@ -1,5 +1,7 @@
 eve
+git+https://github.com/charlesflynn/eve-docs.git
 flask
+Flask-Bootstrap
 Flask-PyMongo
 markdown
 funcy
