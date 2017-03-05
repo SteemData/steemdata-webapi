@@ -13,14 +13,8 @@ STATUS_ERR = 'ERROR'
 # change default response fields
 EXTRA_RESPONSE_FIELDS = ['ID_FIELD']
 
-account_schema = {
-    'name': {
-        'type': 'string',
-        'minlength': 1,
-        'maxlength': 30,
-    },
-    'sp': {},
-}
+# no need to define schemas manually
+ALLOW_UNKNOWN = True
 
 # our models
 DOMAIN = {
@@ -31,7 +25,6 @@ DOMAIN = {
             'url': 'regex("[\w]+")',
             'field': 'name',
         },
-        'schema': account_schema,
     },
     'Posts': {
         'id_field': 'identifier',
