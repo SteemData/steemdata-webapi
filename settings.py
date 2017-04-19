@@ -16,6 +16,10 @@ EXTRA_RESPONSE_FIELDS = ['ID_FIELD']
 # no need to define schemas manually
 ALLOW_UNKNOWN = True
 
+# can use API from any js app (CORS)
+X_DOMAINS = '*'
+# X_HEADERS = '*'
+
 # our models
 DOMAIN = {
     'Accounts': {
@@ -27,6 +31,14 @@ DOMAIN = {
         },
     },
     'Posts': {
+        'id_field': 'identifier',
+        'item_lookup': True,
+        'additional_lookup': {
+            'url': 'regex("@[\w]+/[\w]+")',
+            'field': 'identifier',
+        },
+    },
+    'Comments': {
         'id_field': 'identifier',
         'item_lookup': True,
         'additional_lookup': {
