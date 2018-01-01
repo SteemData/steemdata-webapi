@@ -1,4 +1,4 @@
-FROM python:3.5.3
+FROM python:3.6.3
 MAINTAINER furion <_@furion.me>
 
 COPY . /src
